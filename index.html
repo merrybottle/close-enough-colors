@@ -2,12 +2,50 @@
 <html>
   <head>
     <title>Close Enough Colors</title>
-    <script src="closeEnoughColors.js"></script>
+    <script src="javascript/closeEnoughColors.js"></script>
+    <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-    <script>
-      console.log(closeEnoughColors('#bbbbbb', ['#ffffff', '#aaaaaa']));
-    </script>
+    <div class="container">
+      <h1>Close enough colors</h1>
+      <h2>Find the color that's just... close enough</h2>
 
+      <hr />
+
+      <p>Got a color but it doesn't match the pre-existing palette?  <br />Use this tool to search through your predefined list to get the nearest color ☺</p>
+
+      <form>
+        <div class="color-select">
+          <div class="color-select__row">
+            <div class="color-select__label">
+              <label for="personal-color">Your unmatchable color</label>
+            </div>
+            <div class="color-select__inputs">
+              <input id="personal-color" name="personal-color" type="color" />
+            </div>
+          </div>
+          <div class="color-select__row">
+            <div class="color-select__label">
+              <label for="palette-color-1">Palette</label>
+            </div>
+            <div class="color-select__inputs palette-inputs"></div>
+            <button id="palette-color-add" type="button">Add</button>
+          </div>
+        </div>
+      </form>
+
+      <div id="result">
+        <h1>Tada!</h1>
+        <div>
+          <div class="result-color" id="result-color"></div>
+          <div>
+            <p id="result-color-hex"></p>
+            <p id="result-color-rgb"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="javascript/script.js"></script>
   </body>
 </html>

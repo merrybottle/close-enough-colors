@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic|Lobster');
+
+h1,
+h2 {
+  font-family: 'Lobster', cursive;
+  text-align: center;
+}
+
+h1 {
+  color: #7b95ad;
+  display: flex;
+  font-size: 40px;
+  line-height: 50px;
+}
+
+h1::after,
+h1::before {
+  background-color: #7b95ad;
+  content: "";
+  display: block;
+  flex: 1;
+  height: 1px;
+  margin-top: 25px;
+}
+
+h1::before {
+  margin-right: 40px;
+}
+
+h1::after {
+  margin-left: 40px;
+}
+
+h2 {
+  color: #34434e;
+  font-size: 24px;
+}
+
+p {
+  color: #2a333c;
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+label {
+  color: #43889d;
+  display: inline-block;
+  font-family: 'Lobster', cursive;
+  font-size: 24px;
+  letter-spacing: 1px;
+  line-height: 24px;
+}
+
+input {
+  border: 0;
+  height: 24px;
+  padding: 0;
+  width: 35px;
+}
+
+input::-webkit-color-swatch-wrapper {
+  border: 1px solid #34434e;
+  border-radius: 2px;
+  padding: 0;
+}
+
+input::-webkit-color-swatch {
+  border: 0;
+}
+
+hr {
+  border: 0;
+}
+
+hr::before {
+  color: #c3dbfd;
+  content: "\2601\a0\2601\a0\2601";
+  display: block;
+  font-size: 50px;
+  margin: 8px 0;
+  text-align: center;
+}
+
+br {
+  display: none;
+}
+
+button {
+  background-color: #43889d;
+  border: 0;
+  border-radius: 2px;
+  color: white;
+  font-family: 'Lobster', cursive;
+  font-size: 14px;
+  height: 24px;
+  padding: 0 10px;
+}
+
+.container {
+  padding: 0 30px 50px;
+}
+
+.color-select {
+  margin: 40px auto 0;
+  width: 500px;
+}
+
+.color-select__row {
+  margin-bottom: 20px;
+}
+
+.color-select__row::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.color-select__label {
+  float: left;
+  margin-right: 20px;
+  text-align: right;
+  width: 250px;
+}
+
+.color-select__inputs {
+  float: left;
+}
+
+.color-select__inputs.palette-inputs::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.color-select__inputs.palette-inputs > div {
+  float: left;
+  margin-right: 5px;
+}
+
+.result-color {
+  border: 3px solid white;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px #43889d;
+  height: 100px;
+  margin: 0 auto;
+  width: 100px;
+}
+
+@media (min-width: 1024px) {
+  .container {
+    margin: 0 auto;
+    width: 1024px;
+  }
+
+  br {
+    display: block;
+  }
+}

@@ -1,7 +1,7 @@
-(function(context) {
+var CloseEnoughColors = function () {
   var hexValues = "0123456789abcdef";
 
-  function closeEnoughColors(color, palette) {
+  function getClosestColor(color, palette) {
     if (!color || !palette || !palette.length) {
       return null;
     }
@@ -93,9 +93,5 @@
     return null;
   }
 
-  if (typeof module === 'object' && module && module.exports) {
-    module.exports = closeEnoughColors;
-  } else {
-    context.closeEnoughColors = closeEnoughColors;
-  }
-}(this));
+  return { getClosestColor: getClosestColor };
+};
