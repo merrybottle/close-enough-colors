@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic|Lobster');
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic|Lobster|Fredericka+the+Great');
 
 h1,
 h2 {
@@ -11,6 +11,7 @@ h1 {
   display: flex;
   font-size: 40px;
   line-height: 50px;
+  margin: 32px 0;
 }
 
 h1::after,
@@ -93,54 +94,69 @@ button {
   border: 0;
   border-radius: 2px;
   color: white;
-  font-family: 'Lobster', cursive;
-  font-size: 14px;
+  cursor: pointer;
+  font-family: 'Fredericka the Great', cursive;
+  font-size: 10px;
   height: 24px;
+  letter-spacing: 2px;
   padding: 0 10px;
+  text-transform: uppercase;
+}
+
+button:hover {
+  background-color: #2b454f;
 }
 
 .container {
-  padding: 0 30px 50px;
+  padding: 0 30px 100px;
 }
 
-.color-select {
+.form {
   margin: 40px auto 0;
   width: 500px;
 }
 
-.color-select__row {
+.form__row {
   margin-bottom: 20px;
 }
 
-.color-select__row::after {
+.form__row::after {
   clear: both;
   content: "";
   display: table;
 }
 
-.color-select__label {
+.form__label {
   float: left;
   margin-right: 20px;
   text-align: right;
   width: 250px;
 }
 
-.color-select__inputs {
+.form__inputs {
   float: left;
 }
 
-.color-select__inputs.palette-inputs::after {
+.form__inputs.palette-inputs::after {
   clear: both;
   content: "";
   display: table;
 }
 
-.color-select__inputs.palette-inputs > div {
+.form__inputs.palette-inputs > div {
   float: left;
   margin-right: 5px;
 }
 
-.result-color {
+.result {
+  margin-top: 56px;
+}
+
+.result__wrapper {
+  margin-top: 32px;
+}
+
+.result__color {
   border: 3px solid white;
   border-radius: 50%;
   box-shadow: 0 0 0 3px #43889d;
@@ -149,9 +165,39 @@ button {
   width: 100px;
 }
 
+.result__row {
+  margin-top: 32px;
+  position: relative;
+  text-align: center;
+}
+
+.result__row__input {
+  background: none;
+  border-bottom: 1px dashed #43889d;
+  color: #2a333c;
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 24px;
+  letter-spacing: 0.5px;
+  line-height: 24px;
+  padding: 10px;
+  text-align: center;
+  width: 400px;
+}
+
+.result__row__copy-button {
+  margin-left: -80px;
+  text-align: center;
+  width: 80px;
+}
+
+.result__row__copy-alert {
+  position: absolute;
+}
+
 @media (min-width: 1024px) {
   .container {
     margin: 0 auto;
+    position: relative;
     width: 1024px;
   }
 

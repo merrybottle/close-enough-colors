@@ -16,33 +16,40 @@
       <p>Got a color but it doesn't match the pre-existing palette?  <br />Use this tool to search through your predefined list to get the nearest color ☺</p>
 
       <form>
-        <div class="color-select">
-          <div class="color-select__row">
-            <div class="color-select__label">
+        <div class="form">
+          <div class="form__row">
+            <div class="form__label">
               <label for="personal-color">Your unmatchable color</label>
             </div>
-            <div class="color-select__inputs">
+            <div class="form__inputs">
               <input id="personal-color" name="personal-color" type="color" />
             </div>
           </div>
-          <div class="color-select__row">
-            <div class="color-select__label">
+          <div class="form__row">
+            <div class="form__label">
               <label for="palette-color-1">Palette</label>
             </div>
-            <div class="color-select__inputs palette-inputs"></div>
+            <div class="form__inputs palette-inputs"></div>
             <button id="palette-color-add" type="button">Add</button>
           </div>
         </div>
       </form>
 
-      <div id="result">
+      <div class="result" id="result">
         <h1>Tada!</h1>
-        <div>
-          <div class="result-color" id="result-color"></div>
-          <div>
-            <p id="result-color-hex"></p>
-            <p id="result-color-rgb"></p>
-          </div>
+        <h2>This is the nearest color in your palette!</h2>
+        <div class="result__wrapper">
+          <div class="result__color" id="result-color"></div>
+          <form>
+            <div class="result__row">
+              <input class="result__row__input" id="result-color-hex" type="text" readonly="readonly" />
+              <button class="result__row__copy-button" id="result-hex-copy" type="button">Copy</button>
+            </div>
+            <div class="result__row">
+              <input class="result__row__input" id="result-color-rgb" type="text" readonly="readonly" />
+              <button class="result__row__copy-button" id="result-rgb-copy" type="button">Copy</button>
+            </div>
+          </form>
         </div>
       </div>
     </div>

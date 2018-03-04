@@ -16,12 +16,14 @@ var resultElement = document.getElementById('result-color');
 var resultContainerElement = document.getElementById('result');
 var resultHexElement = document.getElementById('result-color-hex');
 var resultRGBElement = document.getElementById('result-color-rgb');
+var resultHexCopyButton = document.getElementById('result-hex-copy');
+var resultRGBCopyButton = document.getElementById('result-rgb-copy');
 var setResult = function (result) {
   if (result) {
     resultContainerElement.style = 'display: block;';
     resultElement.style = 'background-color: ' + result.hex + ';';
-    resultHexElement.innerHTML = '<strong>Hex:</strong> ' + result.hex;
-    resultRGBElement.innerHTML = '<strong>RGB:</strong> rgb(' + result.rgb.r + ', ' + result.rgb.g + ', ' + result.rgb.b + ')';
+    resultHexElement.value = result.hex;
+    resultRGBElement.value = 'rgb(' + result.rgb.r + ', ' + result.rgb.g + ', ' + result.rgb.b + ')';
   } else {
     resultContainerElement.style = 'display: none;';
   }
@@ -76,6 +78,24 @@ paletteColorAddButton.onclick = function (e) {
   newInputContainer.getElementsByClassName('palette-input')[0].onchange = paletteChange;
 
   setResult(result);
+}
+
+resultHexCopyButton.onclick = function () {
+  resultHexElement.select();
+  document.execCommand("Copy");
+  resultHexCopyButton.innerText = 'Copied!';
+  setTimeout(function () {
+    resultHexCopyButton.innerText = 'Copy';
+  }, 3000);
+}
+
+resultRGBCopyButton.onclick = function () {
+  resultRGBElement.select();
+  document.execCommand("Copy");
+  resultRGBCopyButton.innerText = 'Copied!';
+  setTimeout(function () {
+    resultRGBCopyButton.innerText = 'Copy';
+  }, 3000);
 }
 
 setResult(closeEnoughColors.getClosestColor( colors.personal, colors.palette ));
