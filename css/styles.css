@@ -8,28 +8,9 @@ h2 {
 
 h1 {
   color: #7b95ad;
-  display: flex;
   font-size: 40px;
   line-height: 50px;
   margin: 32px 0;
-}
-
-h1::after,
-h1::before {
-  background-color: #7b95ad;
-  content: "";
-  display: block;
-  flex: 1;
-  height: 1px;
-  margin-top: 25px;
-}
-
-h1::before {
-  margin-right: 40px;
-}
-
-h1::after {
-  margin-left: 40px;
 }
 
 h2 {
@@ -80,7 +61,7 @@ hr::before {
   color: #c3dbfd;
   content: "\2601\a0\2601\a0\2601";
   display: block;
-  font-size: 50px;
+  font-size: 30px;
   margin: 8px 0;
   text-align: center;
 }
@@ -176,12 +157,12 @@ button:hover {
   border-bottom: 1px dashed #43889d;
   color: #2a333c;
   font-family: 'Nanum Gothic', sans-serif;
-  font-size: 24px;
+  font-size: 18px;
   letter-spacing: 0.5px;
   line-height: 24px;
   padding: 10px;
-  text-align: center;
-  width: 400px;
+  text-align: left;
+  width: 250px;
 }
 
 .result__row__copy-button {
@@ -192,6 +173,40 @@ button:hover {
 
 .result__row__copy-alert {
   position: absolute;
+}
+
+@media (min-width: 550px) {
+  h1 {
+    display: flex;
+  }
+
+  h1::after,
+  h1::before {
+    background-color: #7b95ad;
+    content: "";
+    display: block;
+    flex: 1;
+    height: 1px;
+    margin-top: 25px;
+  }
+
+  h1::before {
+    margin-right: 40px;
+  }
+
+  h1::after {
+    margin-left: 40px;
+  }
+
+  hr::before {
+    font-size: 50px;
+  }
+
+  .result__row__input {
+    font-size: 24px;
+    text-align: center;
+    width: 400px;
+  }
 }
 
 @media (min-width: 1024px) {
