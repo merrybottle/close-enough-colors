@@ -94,11 +94,11 @@ button:hover {
 
 .form {
   margin: 40px auto 0;
-  width: 500px;
 }
 
 .form__row {
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .form__row::after {
@@ -108,14 +108,13 @@ button:hover {
 }
 
 .form__label {
-  float: left;
-  margin-right: 20px;
-  text-align: right;
-  width: 250px;
+  margin-bottom: 10px;
 }
 
-.form__inputs {
-  float: left;
+.form__inputs-wrapper,
+.form__inputs.palette-inputs {
+  display: flex;
+  justify-content: center;
 }
 
 .form__inputs.palette-inputs::after {
@@ -125,7 +124,6 @@ button:hover {
 }
 
 .form__inputs.palette-inputs > div {
-  float: left;
   margin-right: 5px;
 }
 
@@ -200,6 +198,35 @@ button:hover {
 
   hr::before {
     font-size: 50px;
+  }
+
+  .form {
+    width: 500px;
+  }
+
+  .form__row {
+    text-align: left;
+  }
+
+  .form__label {
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 0;
+    text-align: right;
+    width: 250px;
+  }
+
+  .form__inputs-wrapper,
+  .form__inputs.palette-inputs {
+    display: block;
+  }
+
+  .form__inputs {
+    float: left;
+  }
+
+  .form__inputs.palette-inputs > div {
+    float: left;
   }
 
   .result__row__input {
